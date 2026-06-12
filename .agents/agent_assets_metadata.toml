@@ -1,0 +1,50 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "-bZpDIAnLM1JNfRQ36p5h"
+uri = "file://artifacts/studio-elettrico/src/assets/images/hero.png"
+type = "image"
+title = "control room green lighting"
+
+[[generated]]
+id = "tTLmS6NRjZjKO2xJwYIGs"
+uri = "file://artifacts/studio-elettrico/src/assets/images/about.png"
+type = "image"
+title = "engineers reviewing blueprints"
+
+[[generated]]
+id = "T-dkUVVCLEPBOTbcMM5Dz"
+uri = "file://artifacts/studio-elettrico/src/assets/images/project-1.png"
+type = "image"
+title = "industrial port facility"
+
+[[generated]]
+id = "Sja78_RR4aaq05NT4lM30"
+uri = "file://artifacts/studio-elettrico/src/assets/images/project-2.png"
+type = "image"
+title = "datacenter server room"
+
+[[generated]]
+id = "nxomp-m5MZOjlhwm1Ek5p"
+uri = "file://artifacts/studio-elettrico/src/assets/images/project-3.png"
+type = "image"
+title = "commercial mall electrical"
+
+[[generated]]
+id = "SMfP1XDwq8fO3wMwgSQuT"
+uri = "file://artifacts/studio-elettrico/src/assets/images/project-4.png"
+type = "image"
+title = "hospital critical power"
+
+[[generated]]
+id = "63I1sSr5jLQdKHezEBIkE"
+uri = "file://artifacts/studio-elettrico/src/assets/images/project-5.png"
+type = "image"
+title = "smart home electrical"
+
+[[generated]]
+id = "1QjqiwVXxsDPIMUxYd4X_"
+uri = "file://artifacts/studio-elettrico/src/assets/images/project-6.png"
+type = "image"
+title = "industrial solar plant"

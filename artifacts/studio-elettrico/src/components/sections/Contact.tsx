@@ -37,8 +37,17 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="rounded overflow-hidden h-80 bg-[#f5f5f5] border border-[#e0e0e0] relative flex items-center justify-center">
-            <span className="text-[#555] font-semibold tracking-wide">Mappa Interattiva (Placeholder)</span>
+          <div className="rounded overflow-hidden h-80 border border-[#e0e0e0]">
+            <iframe
+              title="Sede Studio Tecnico Davide Orsi"
+              src="https://www.google.com/maps?q=Piazza+Patrioti+5,+29016+Cortemaggiore+PC,+Italia&output=embed&hl=it"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </motion.div>
       </div>

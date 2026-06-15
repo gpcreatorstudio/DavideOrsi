@@ -18,10 +18,13 @@ export function About() {
               Chi Siamo
             </h3>
             <p className="text-lg text-[#555] mb-6 leading-relaxed">
-              Studio Tecnico SE Impianti è uno studio di progettazione specializzato in impianti elettrici e tecnologici per il settore civile, industriale e terziario. Offriamo un servizio completo: dalla progettazione esecutiva alla direzione lavori, dalla certificazione alla consulenza normativa. Il nostro team di ingegneri certificati garantisce soluzioni tecnicamente avanzate, a norma di legge e orientate all'efficienza.
+              Studio Tecnico Davide Orsi STP SRL è uno studio di progettazione specializzato in impianti elettrici e tecnologici per il settore civile, industriale e zootecnico.
+            </p>
+            <p className="text-lg text-[#555] mb-6 leading-relaxed">
+              Offriamo servizi professionali di progettazione, consulenza e sviluppo di soluzioni per il risparmio energetico e l'efficientamento degli impianti, con particolare attenzione alle tecnologie innovative e alle energie rinnovabili.
             </p>
             <p className="text-lg text-[#555] leading-relaxed">
-              Operiamo in tutta Italia con un approccio metodico, trasparente e orientato ai risultati del cliente.
+              Operiamo al servizio di privati, aziende ed enti pubblici, garantendo progetti sicuri, sostenibili e conformi alle normative vigenti. Siamo inoltre disponibili per collaborazioni con altri studi tecnici, integrando competenze e professionalità per la realizzazione di progetti complessi e multidisciplinari.
             </p>
           </motion.div>
 

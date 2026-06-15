@@ -1,5 +1,5 @@
-import { Zap } from "lucide-react";
 import { Link } from "wouter";
+import logo from "@assets/ORSI_DAVIDE_LOGOwh_1781513396998.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,13 +17,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
           
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6 cursor-pointer inline-flex">
-              <div className="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center rounded">
-                <Zap className="w-5 h-5 text-primary" fill="currentColor" />
-              </div>
-              <span className="font-heading font-bold text-2xl tracking-tight text-white">
-                SE Impianti
-              </span>
+            <Link href="/" className="inline-flex mb-6 cursor-pointer">
+              <img src={logo} alt="Davide Orsi Studio Tecnico STP SRL" className="h-12 w-auto" />
             </Link>
             <p className="text-[#a0a0a0] max-w-sm leading-relaxed mb-6 font-body text-sm">
               Studio Tecnico specializzato nella progettazione di impianti elettrici complessi per i settori industriale, commerciale e civile. 
@@ -65,7 +60,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-primary/30 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-[#777]">
-          <p>© {currentYear} Studio Tecnico SE Impianti — P.IVA 12345678901</p>
+          <p>© {currentYear} Davide Orsi Studio Tecnico STP SRL</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>

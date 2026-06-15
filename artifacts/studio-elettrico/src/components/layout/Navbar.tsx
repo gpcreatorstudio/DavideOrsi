@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "@assets/ORSI_DAVIDE_LOGOwh_1781513396998.png";
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,13 +25,8 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#071208] border-b border-white/10">
       <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 z-50" data-testid="link-home">
-          <div className="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center rounded">
-            <Zap className="w-5 h-5 text-primary" fill="currentColor" />
-          </div>
-          <span className="font-heading font-bold text-xl tracking-tight text-white">
-            SE Impianti
-          </span>
+        <Link href="/" className="flex items-center z-50" data-testid="link-home">
+          <img src={logo} alt="Davide Orsi Studio Tecnico STP SRL" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Nav */}

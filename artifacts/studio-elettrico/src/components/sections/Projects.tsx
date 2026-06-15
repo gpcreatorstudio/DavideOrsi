@@ -30,6 +30,21 @@ import plex6 from "@assets/5f57c5f6-ab61-4008-a475-0b922bf0c6ea_1781511103716.jp
 import plex7 from "@assets/d6c6767d-d678-4a3c-9cf1-fa2a46a6e1df_1781511103718.jpeg";
 import plex8 from "@assets/8d0a7e9f-73f3-4693-a3f2-345ecf009fc9_1781511103717.jpeg";
 import plex9 from "@assets/IMG_9183_1781511103719.jpeg";
+import ottica1 from "@assets/20260413_123043079_iOS_1781511542778.jpg";
+import ottica2 from "@assets/20260413_124744926_iOS_1781511542771.jpg";
+import ottica3 from "@assets/20260413_124740292_iOS_1781511542771.jpg";
+import ottica4 from "@assets/20260413_124737343_iOS_1781511542771.jpg";
+import ottica5 from "@assets/20260413_124734209_iOS_1781511542775.jpg";
+import ottica6 from "@assets/20260413_124719629_iOS_1781511542775.jpg";
+import ottica7 from "@assets/20260413_124712926_iOS_1781511542776.jpg";
+import ottica8 from "@assets/20260413_124703527_iOS_1781511542776.jpg";
+import ottica9 from "@assets/20260413_124701103_iOS_1781511542776.jpg";
+import ottica10 from "@assets/20260413_124653785_iOS_1781511542777.jpg";
+import ottica11 from "@assets/20260413_124647647_iOS_1781511542777.jpg";
+import ottica12 from "@assets/20260413_124641505_iOS_1781511542777.jpg";
+import ottica13 from "@assets/20260413_124638836_iOS_1781511542777.jpg";
+import ottica14 from "@assets/20260413_124624276_iOS_1781511542778.jpg";
+import ottica15 from "@assets/20260413_124620327_iOS_1781511542778.jpg";
 
 const projects = [
   {
@@ -58,6 +73,14 @@ const projects = [
   },
   {
     id: 4,
+    title: 'Negozio "NUOVA OTTICA"',
+    subtitle: "Maranello (MO)",
+    category: "Locale Commerciale",
+    image: ottica1,
+    gallery: [ottica1, ottica2, ottica3, ottica4, ottica5, ottica6, ottica7, ottica8, ottica9, ottica10, ottica11, ottica12, ottica13, ottica14, ottica15],
+  },
+  {
+    id: 4000,
     title: "Ospedale Civile Bergamo — Reparto Emergenze",
     category: "Sanitario",
     image: proj4,

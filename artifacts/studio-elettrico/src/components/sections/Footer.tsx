@@ -12,47 +12,40 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-foreground text-white pt-16 pb-8 border-t border-white/10">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+    <footer className="bg-[#071208] text-white pt-20 pb-8">
+      <div className="container mx-auto px-4 md:px-6 max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
           
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4 cursor-pointer">
-              <Zap className="w-8 h-8 text-primary" fill="currentColor" />
-              <span className="font-heading font-bold text-2xl tracking-tight">
+            <Link href="/" className="flex items-center gap-3 mb-6 cursor-pointer inline-flex">
+              <div className="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center rounded">
+                <Zap className="w-5 h-5 text-primary" fill="currentColor" />
+              </div>
+              <span className="font-heading font-bold text-2xl tracking-tight text-white">
                 SE Impianti
               </span>
             </Link>
-            <p className="text-slate-400 max-w-sm leading-relaxed mb-6">
+            <p className="text-[#a0a0a0] max-w-sm leading-relaxed mb-6 font-body text-sm">
               Studio Tecnico specializzato nella progettazione di impianti elettrici complessi per i settori industriale, commerciale e civile. 
               Precisione, sicurezza e innovazione dal 2004.
             </p>
-            <div className="flex gap-4">
-              <span className="px-3 py-1 border border-white/20 rounded-md text-xs font-bold text-slate-300">ISO 9001:2015</span>
-              <span className="px-3 py-1 border border-white/20 rounded-md text-xs font-bold text-slate-300">SOA Cat. OS30</span>
-            </div>
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-4">Navigazione</h4>
-            <ul className="space-y-3">
+            <h4 className="font-heading font-bold text-lg mb-6 uppercase tracking-wider text-white">Studio</h4>
+            <ul className="space-y-4">
               <li>
-                <button onClick={() => scrollTo("#about")} className="text-slate-400 hover:text-primary transition-colors text-left">
+                <button onClick={() => scrollTo("#about")} className="text-[#a0a0a0] hover:text-primary transition-colors text-sm font-medium">
                   Chi Siamo
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo("#projects")} className="text-slate-400 hover:text-primary transition-colors text-left">
+                <button onClick={() => scrollTo("#projects")} className="text-[#a0a0a0] hover:text-primary transition-colors text-sm font-medium">
                   Progetti
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo("#services")} className="text-slate-400 hover:text-primary transition-colors text-left">
-                  Servizi
-                </button>
-              </li>
-              <li>
-                <button onClick={() => scrollTo("#contact")} className="text-slate-400 hover:text-primary transition-colors text-left">
+                <button onClick={() => scrollTo("#contact")} className="text-[#a0a0a0] hover:text-primary transition-colors text-sm font-medium">
                   Contatti
                 </button>
               </li>
@@ -60,24 +53,22 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-4">Servizi</h4>
-            <ul className="space-y-3">
-              <li className="text-slate-400">Progettazione Elettrica</li>
-              <li className="text-slate-400">Impianti Industriali</li>
-              <li className="text-slate-400">Sistemi Fotovoltaici</li>
-              <li className="text-slate-400">Domotica Avanzata</li>
-              <li className="text-slate-400">Verifiche e Collaudi</li>
+            <h4 className="font-heading font-bold text-lg mb-6 uppercase tracking-wider text-white">Servizi</h4>
+            <ul className="space-y-4">
+              <li><button onClick={() => scrollTo("#services")} className="text-[#a0a0a0] hover:text-primary transition-colors text-sm font-medium">Residenziale</button></li>
+              <li><button onClick={() => scrollTo("#services")} className="text-[#a0a0a0] hover:text-primary transition-colors text-sm font-medium">Commerciale</button></li>
+              <li><button onClick={() => scrollTo("#services")} className="text-[#a0a0a0] hover:text-primary transition-colors text-sm font-medium">Industriale</button></li>
+              <li><button onClick={() => scrollTo("#services")} className="text-[#a0a0a0] hover:text-primary transition-colors text-sm font-medium">Terziario</button></li>
             </ul>
           </div>
 
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-          <p>© {currentYear} Studio Tecnico SE Impianti — P.IVA 12345678901 — Tutti i diritti riservati.</p>
-          <div className="flex gap-4">
+        <div className="pt-8 border-t border-primary/30 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-[#777]">
+          <p>© {currentYear} Studio Tecnico SE Impianti — P.IVA 12345678901</p>
+          <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Note Legali</a>
           </div>
         </div>
       </div>

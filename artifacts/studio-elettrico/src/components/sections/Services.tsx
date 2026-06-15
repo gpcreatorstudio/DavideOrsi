@@ -1,98 +1,170 @@
-import { motion } from "framer-motion";
-import { Zap, Factory, Sun, Home, ClipboardCheck, BookOpen } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Zap } from "lucide-react";
 
-const services = [
-  {
-    icon: Zap,
-    title: "Progettazione Elettrica",
-    description: "Sviluppo di impianti BT e MT, quadri elettrici generali e di zona per ogni destinazione d'uso.",
-  },
-  {
-    icon: Factory,
-    title: "Impianti Industriali",
-    description: "Automazione industriale, distribuzione forza motrice e sistemi di sicurezza integrati.",
-  },
-  {
-    icon: Sun,
-    title: "Sistemi Fotovoltaici",
-    description: "Progettazione e integrazione architettonica di impianti FV con sistemi di accumulo avanzati.",
-  },
-  {
-    icon: Home,
-    title: "Domotica & Smart Building",
-    description: "Integrazione di sistemi building automation su protocolli standard KNX, BACnet e DALI.",
-  },
-  {
-    icon: ClipboardCheck,
-    title: "Verifiche e Collaudi",
-    description: "Collaudi tecnico-funzionali secondo norme CEI 64-8 e verifiche DM 37/08.",
-  },
-  {
-    icon: BookOpen,
-    title: "Consulenza Normativa",
-    description: "Supporto tecnico per conformità normative CEI, UNI e direttiva ATEX per zone classificate.",
-  },
-];
+type TabId = "residenziale" | "commerciale" | "industriale" | "terziario";
+
+const tabsData = {
+  residenziale: [
+    {
+      title: "Progettazione Elettrica Abitativa",
+      items: [
+        "Impianti civili a norma CEI 64-8",
+        "Quadri elettrici residenziali",
+        "Impianti domotici KNX",
+        "Certificazioni e collaudi",
+        "Consulenza SUPERBONUS"
+      ]
+    },
+    {
+      title: "Efficienza Energetica Residenziale",
+      items: [
+        "Impianti fotovoltaici residenziali",
+        "Sistemi di accumulo",
+        "Ricarica veicoli elettrici",
+        "Audit energetico",
+        "Pratiche GSE/incentivi"
+      ]
+    }
+  ],
+  commerciale: [
+    {
+      title: "Impianti Commerciali",
+      items: [
+        "Centri commerciali e GDO",
+        "Uffici e showroom",
+        "Impianti di sicurezza",
+        "Sistemi UPS e continuità",
+        "Manutenzione preventiva"
+      ]
+    },
+    {
+      title: "Illuminazione Professionale",
+      items: [
+        "Progettazione illuminotecnica",
+        "LED e DALI",
+        "Risparmio energetico certificato",
+        "Controllo BEMS",
+        "Certificazione UNI EN 12464"
+      ]
+    }
+  ],
+  industriale: [
+    {
+      title: "Progettazione Impianti Industriali",
+      items: [
+        "Distribuzione MT/BT",
+        "Quadri MCC e PLC",
+        "Cabine di trasformazione",
+        "Impianti ATEX",
+        "Coordinamento interferenze"
+      ]
+    },
+    {
+      title: "Automazione Industriale",
+      items: [
+        "Supervisione SCADA",
+        "Reti industriali (Profibus/Modbus)",
+        "Variatori di frequenza",
+        "Gruppi elettrogeni",
+        "Analisi del carico"
+      ]
+    }
+  ],
+  terziario: [
+    {
+      title: "Strutture Terziarie",
+      items: [
+        "Ospedali e strutture sanitarie",
+        "Alberghi e hospitality",
+        "Scuole e università",
+        "Musei e beni culturali",
+        "Data center"
+      ]
+    },
+    {
+      title: "Impianti Speciali",
+      items: [
+        "Sistemi BMS/BAS",
+        "TVCC e controllo accessi",
+        "Impianti antincendio",
+        "Rilevazione gas",
+        "Sistemi di comunicazione"
+      ]
+    }
+  ]
+};
 
 export function Services() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  };
+  const [activeTab, setActiveTab] = useState<TabId>("residenziale");
 
   return (
-    <section id="services" className="py-24 bg-[#0f172a] relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
-
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-primary font-semibold tracking-wider uppercase mb-3 text-sm">Competenze</h2>
-          <h3 className="font-heading text-3xl md:text-5xl font-bold text-white mb-6">
+    <section id="services" className="py-24 bg-white">
+      <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+        <div className="mb-12">
+          <h2 className="text-primary font-heading font-extrabold uppercase tracking-widest text-sm mb-2">I Nostri Servizi</h2>
+          <h3 className="font-heading text-4xl md:text-5xl font-bold text-[#111] mb-6">
             I Nostri Servizi
           </h3>
-          <p className="text-lg text-slate-400">
-            Copriamo l'intero ciclo di vita dell'impianto elettrico: dalla fattibilità preliminare al collaudo finale.
+          <p className="text-lg text-[#555] max-w-3xl">
+            Soluzioni ingegneristiche su misura per ogni settore. Dalla progettazione all'efficienza energetica, garantiamo standard elevati e conformità normativa.
           </p>
         </div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {services.map((service, idx) => {
-            const Icon = service.icon;
-            return (
-              <motion.div
-                key={idx}
-                variants={itemVariants}
-                className="glass-card-dark p-8 hover:bg-white/[0.08] transition-colors duration-300"
+        <div className="mb-8 overflow-x-auto pb-2 scrollbar-hide">
+          <div className="flex gap-8 border-b border-[#e0e0e0] min-w-max">
+            {(Object.keys(tabsData) as TabId[]).map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`pb-4 text-base font-semibold capitalize transition-colors relative ${
+                  activeTab === tab ? "text-primary" : "text-[#555] hover:text-[#111]"
+                }`}
+                data-testid={`tab-${tab}`}
               >
-                <div className="w-14 h-14 rounded-2xl bg-primary/20 flex items-center justify-center mb-6">
-                  <Icon className="w-7 h-7 text-primary" />
+                {tab}
+                {activeTab === tab && (
+                  <motion.div
+                    layoutId="activeTabIndicator"
+                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary"
+                  />
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="min-h-[300px]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+              className="grid md:grid-cols-2 gap-6"
+            >
+              {tabsData[activeTab].map((box, idx) => (
+                <div key={idx} className="border border-[#e0e0e0] p-8 rounded bg-[#f8f8f8]">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm">
+                    <Zap className="w-6 h-6 text-primary" />
+                  </div>
+                  <h4 className="text-xl font-heading font-bold text-[#111] mb-4">
+                    {box.title}
+                  </h4>
+                  <ul className="space-y-3">
+                    {box.items.map((item, i) => (
+                      <li key={i} className="flex items-start gap-3 text-[#555]">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h4 className="text-xl font-heading font-bold text-white mb-4">
-                  {service.title}
-                </h4>
-                <p className="text-slate-400 leading-relaxed">
-                  {service.description}
-                </p>
-              </motion.div>
-            );
-          })}
-        </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   );

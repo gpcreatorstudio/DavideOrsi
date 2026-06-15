@@ -2,71 +2,60 @@ import { motion } from "framer-motion";
 import aboutImg from "@/assets/images/about.png";
 
 export function About() {
-  const stats = [
-    { label: "Progetti", value: "150+" },
-    { label: "Anni di Esperienza", value: "20" },
-    { label: "Clienti Soddisfatti", value: "98%" },
-    { label: "Certificati", value: "ISO" },
-  ];
-
   return (
-    <section id="about" className="py-24 bg-white">
-      <div className="container px-4 md:px-6 mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Image Side */}
+    <section id="about" className="py-24 bg-[#f8f8f8]">
+      <div className="container px-4 md:px-6 mx-auto max-w-6xl">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
+          
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="relative"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
+            <h2 className="text-primary font-heading font-extrabold uppercase tracking-widest text-sm mb-2">Chi Siamo</h2>
+            <h3 className="font-heading text-4xl md:text-5xl font-bold text-[#111] mb-6 leading-tight">
+              Chi Siamo
+            </h3>
+            <p className="text-lg text-[#555] mb-6 leading-relaxed">
+              Studio Tecnico SE Impianti è uno studio di progettazione specializzato in impianti elettrici e tecnologici per il settore civile, industriale e terziario. Offriamo un servizio completo: dalla progettazione esecutiva alla direzione lavori, dalla certificazione alla consulenza normativa. Il nostro team di ingegneri certificati garantisce soluzioni tecnicamente avanzate, a norma di legge e orientate all'efficienza.
+            </p>
+            <p className="text-lg text-[#555] leading-relaxed">
+              Operiamo in tutta Italia con un approccio metodico, trasparente e orientato ai risultati del cliente.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <div className="rounded overflow-hidden mb-8 bg-[#e0e0e0] aspect-[4/3]">
               <img
                 src={aboutImg}
-                alt="Ingegneri elettrici che esaminano progetti"
-                className="w-full h-full object-cover"
+                alt="Ingegneri al lavoro"
+                className="w-full h-full object-cover grayscale-[20%]"
                 loading="lazy"
               />
             </div>
             
-            {/* Floating Glass Stats */}
-            <div className="absolute -bottom-8 -right-8 md:-bottom-12 md:-right-12 grid grid-cols-2 gap-4">
-              {stats.map((stat, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4 + i * 0.1, type: "spring" }}
-                  className="glass-card bg-white/80 p-6 text-center shadow-xl backdrop-blur-xl"
-                >
-                  <div className="text-2xl md:text-3xl font-bold text-primary font-heading">{stat.value}</div>
-                  <div className="text-xs md:text-sm font-medium text-slate-600 mt-1">{stat.label}</div>
-                </motion.div>
-              ))}
+            <div className="grid grid-cols-3 gap-4">
+              <div className="bg-white border border-[#e0e0e0] p-4 rounded text-center">
+                <div className="text-3xl font-heading font-bold text-primary mb-1">18+</div>
+                <div className="text-xs font-semibold text-[#555] uppercase tracking-wider">Anni di Esperienza</div>
+              </div>
+              <div className="bg-white border border-[#e0e0e0] p-4 rounded text-center">
+                <div className="text-3xl font-heading font-bold text-primary mb-1">100+</div>
+                <div className="text-xs font-semibold text-[#555] uppercase tracking-wider">Progetti Completati</div>
+              </div>
+              <div className="bg-white border border-[#e0e0e0] p-4 rounded text-center">
+                <div className="text-3xl font-heading font-bold text-primary mb-1">100%</div>
+                <div className="text-xs font-semibold text-[#555] uppercase tracking-wider">Clienti Soddisfatti</div>
+              </div>
             </div>
           </motion.div>
 
-          {/* Text Side */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="lg:pl-10 mt-16 lg:mt-0"
-          >
-            <h2 className="text-primary font-semibold tracking-wider uppercase mb-3 text-sm">Chi Siamo</h2>
-            <h3 className="font-heading text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-              Esperienza e rigore al servizio della sicurezza.
-            </h3>
-            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-              Da oltre 20 anni, il nostro studio accompagna imprese e committenti nella progettazione di impianti elettrici sicuri, efficienti e a norma di legge. 
-            </p>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              Il nostro team di ingegneri certificati opera in tutta Italia con competenza, rigore tecnico e attenzione ai dettagli, garantendo standard qualitativi di altissimo livello per ogni singolo progetto.
-            </p>
-          </motion.div>
         </div>
       </div>
     </section>

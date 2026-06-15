@@ -1,16 +1,11 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-
-import heroBg from "@/assets/images/hero.png";
 
 export function Hero() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
@@ -27,60 +22,56 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-foreground">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={heroBg}
-          alt="Ingegneria Elettrica Control Room"
-          className="w-full h-full object-cover"
-        />
-        {/* Dark gradient overlay with radial green glow */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/80 to-[#1a2e1a]/90" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(22,163,74,0.15)_0%,transparent_60%)]" />
-      </div>
-
-      <div className="container relative z-10 px-4 md:px-6 pt-20">
+    <section className="relative min-h-[100dvh] flex items-center overflow-hidden hero-circuit-bg">
+      <div className="absolute inset-0 bg-gradient-to-r from-[#071208] via-[#071208]/90 to-transparent z-0" />
+      
+      <div className="container relative z-10 px-4 md:px-6 pt-24 pb-12 w-full">
         <motion.div
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-4xl"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
+          <motion.div variants={itemVariants} className="mb-6">
+            <span className="text-primary text-sm font-heading font-bold uppercase tracking-[0.2em] border border-primary/30 py-1.5 px-3 rounded-sm bg-primary/10">
+              Studio Tecnico Impianti Elettrici
+            </span>
+          </motion.div>
+
           <motion.h1
             variants={itemVariants}
-            className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6"
+            className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-[clamp(2.8rem,8vw,7rem)] font-[800] text-white leading-[1.1] mb-8 uppercase"
           >
-            Ingegneria Elettrica <br />
-            <span className="text-primary">di Precisione</span>
+            Progettiamo il<br />
+            Futuro<br />
+            Dell'<span className="text-primary">Energia</span>
           </motion.h1>
           
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg text-[#a0a0a0] mb-10 max-w-2xl leading-relaxed font-body"
           >
-            Progettiamo impianti elettrici complessi per il settore industriale, commerciale e residenziale. Affidabilità certificata, precisione ingegneristica.
+            Ingegneria elettrica civile e industriale di altissima qualità. Dalla progettazione alla certificazione, ogni impianto è una firma di precisione e affidabilità.
           </motion.p>
           
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-start gap-4"
           >
-            <Button
-              size="lg"
-              onClick={() => scrollTo("#projects")}
-              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white rounded-full px-8 py-6 text-lg h-14"
+            <button
+              onClick={() => scrollTo("#services")}
+              className="w-full sm:w-auto bg-primary text-[#071208] font-bold rounded px-8 py-4 text-base hover:bg-primary/90 transition-colors"
+              data-testid="button-hero-services"
             >
-              Scopri i Nostri Progetti
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
+              Scopri i Servizi
+            </button>
+            <button
               onClick={() => scrollTo("#contact")}
-              className="w-full sm:w-auto border-white/20 bg-white/5 hover:bg-white/10 text-white rounded-full px-8 py-6 text-lg h-14 backdrop-blur-sm"
+              className="w-full sm:w-auto bg-transparent border border-white text-white font-medium rounded px-8 py-4 text-base hover:bg-white/10 transition-colors"
+              data-testid="button-hero-contact"
             >
               Contattaci
-            </Button>
+            </button>
           </motion.div>
         </motion.div>
       </div>

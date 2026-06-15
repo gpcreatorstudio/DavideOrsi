@@ -1,25 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "wouter";
 import { Menu, X, Zap } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const navLinks = [
     { name: "Chi Siamo", href: "#about" },
-    { name: "Progetti", href: "#projects" },
     { name: "Servizi", href: "#services" },
+    { name: "Progetti", href: "#projects" },
     { name: "Contatti", href: "#contact" },
   ];
 
@@ -32,18 +22,13 @@ export function Navbar() {
   };
 
   return (
-    <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-nav-scrolled py-3" : "glass-nav py-5"
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 z-50">
-          <Zap className="w-8 h-8 text-primary" fill="currentColor" />
-          <span className="font-heading font-bold text-xl tracking-tight text-foreground">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#071208] border-b border-white/10">
+      <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3 z-50" data-testid="link-home">
+          <div className="w-10 h-10 bg-white/5 border border-white/10 flex items-center justify-center rounded">
+            <Zap className="w-5 h-5 text-primary" fill="currentColor" />
+          </div>
+          <span className="font-heading font-bold text-xl tracking-tight text-white">
             SE Impianti
           </span>
         </Link>
@@ -54,24 +39,27 @@ export function Navbar() {
             <button
               key={link.name}
               onClick={() => scrollTo(link.href)}
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              className="text-sm font-medium text-white/90 hover:text-primary transition-colors"
+              data-testid={`button-nav-${link.name.toLowerCase().replace(' ', '-')}`}
             >
               {link.name}
             </button>
           ))}
-          <Button
+          <button
             onClick={() => scrollTo("#contact")}
-            className="bg-primary hover:bg-primary/90 text-white rounded-full px-6"
+            className="text-sm font-bold text-primary px-6 py-2.5 rounded border-[1.5px] border-primary bg-transparent hover:bg-primary hover:text-white transition-all"
+            data-testid="button-cta-navbar"
           >
             Richiedi Preventivo
-          </Button>
+          </button>
         </nav>
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden z-50 text-foreground p-2"
+          className="md:hidden z-50 text-white p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
+          data-testid="button-toggle-menu"
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -83,28 +71,29 @@ export function Navbar() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="absolute top-full left-0 right-0 glass-nav border-t border-white/20 p-6 flex flex-col gap-4 md:hidden shadow-xl"
+              className="absolute top-full left-0 right-0 bg-[#071208] border-t border-white/10 p-6 flex flex-col gap-4 md:hidden shadow-2xl"
             >
               {navLinks.map((link) => (
                 <button
                   key={link.name}
                   onClick={() => scrollTo(link.href)}
-                  className="text-lg font-medium text-foreground py-2 border-b border-white/10 text-left"
+                  className="text-lg font-medium text-white py-3 border-b border-white/5 text-left"
+                  data-testid={`button-mobile-nav-${link.name.toLowerCase().replace(' ', '-')}`}
                 >
                   {link.name}
                 </button>
               ))}
-              <Button
+              <button
                 onClick={() => scrollTo("#contact")}
-                className="bg-primary hover:bg-primary/90 text-white rounded-full w-full mt-4"
-                size="lg"
+                className="text-sm font-bold text-primary mt-4 px-6 py-3 rounded border-[1.5px] border-primary bg-transparent w-full text-center hover:bg-primary hover:text-white transition-all"
+                data-testid="button-mobile-cta"
               >
                 Richiedi Preventivo
-              </Button>
+              </button>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-    </motion.header>
+    </header>
   );
 }

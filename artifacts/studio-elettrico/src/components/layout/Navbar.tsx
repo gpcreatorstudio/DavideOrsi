@@ -24,9 +24,9 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#071208] border-b border-white/10">
-      <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+      <div className="container mx-auto px-4 md:px-6 h-32 flex items-center justify-between">
         <Link href="/" className="flex items-center z-50" data-testid="link-home">
-          <img src={logo} alt="Davide Orsi Studio Tecnico STP SRL" className="h-10 w-auto" />
+          <img src={logo} alt="Davide Orsi Studio Tecnico STP SRL" className="h-28 w-auto" />
         </Link>
 
         {/* Desktop Nav */}

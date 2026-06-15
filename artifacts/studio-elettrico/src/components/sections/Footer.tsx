@@ -18,7 +18,7 @@ export function Footer() {
           
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="inline-flex mb-6 cursor-pointer">
-              <img src={logo} alt="Davide Orsi Studio Tecnico STP SRL" className="h-12 w-auto" />
+              <img src={logo} alt="Davide Orsi Studio Tecnico STP SRL" className="h-36 w-auto" />
             </Link>
             <p className="text-[#a0a0a0] max-w-sm leading-relaxed mb-6 font-body text-sm">
               Studio Tecnico specializzato nella progettazione di impianti elettrici complessi per i settori industriale, commerciale e civile. 

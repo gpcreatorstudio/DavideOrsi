@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Mail } from "lucide-react";
 
 export function Contact() {
   return (
@@ -19,29 +19,21 @@ export function Contact() {
             Siamo a disposizione per consulenze preliminari, preventivi dettagliati e analisi di fattibilità per impianti elettrici industriali e civili.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16 text-left">
-            <div className="flex flex-col items-center md:items-start">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <MapPin className="w-6 h-6 text-primary" />
-              </div>
-              <h4 className="font-bold text-[#111] text-lg mb-2">Sede Operativa</h4>
-              <p className="text-[#555] text-center md:text-left">Via dell'Ingegneria, 12<br />20100 Milano (MI)</p>
-            </div>
-
-            <div className="flex flex-col items-center md:items-start">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                <Phone className="w-6 h-6 text-primary" />
-              </div>
-              <h4 className="font-bold text-[#111] text-lg mb-2">Telefono</h4>
-              <p className="text-[#555]">+39 02 1234567</p>
-            </div>
-
+          <div className="grid md:grid-cols-2 gap-8 mb-16 text-left max-w-2xl mx-auto">
             <div className="flex flex-col items-center md:items-start">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <Mail className="w-6 h-6 text-primary" />
               </div>
-              <h4 className="font-bold text-[#111] text-lg mb-2">Email & PEC</h4>
-              <p className="text-[#555] text-center md:text-left">info@sestudio.it<br />sestudio@pec.it</p>
+              <h4 className="font-bold text-[#111] text-lg mb-2">Email</h4>
+              <a href="mailto:info@orsiperind.it" className="text-[#555] hover:text-primary transition-colors">info@orsiperind.it</a>
+            </div>
+
+            <div className="flex flex-col items-center md:items-start">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <MapPin className="w-6 h-6 text-primary" />
+              </div>
+              <h4 className="font-bold text-[#111] text-lg mb-2">Sede</h4>
+              <p className="text-[#555] text-center md:text-left">Piazza Patrioti n.5<br />29016 Cortemaggiore (PC) – Italia</p>
             </div>
           </div>
 

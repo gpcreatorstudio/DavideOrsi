@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import proj2 from "@/assets/images/project-2.png";
 import proj3 from "@/assets/images/project-3.png";
 import proj4 from "@/assets/images/project-4.png";
 import proj5 from "@/assets/images/project-5.png";
@@ -10,6 +9,18 @@ import blindTiger1 from "@assets/20260320_01_(1)_1781510852916.jpg";
 import blindTiger2 from "@assets/20260320_02_1781510852915.jpg";
 import blindTiger3 from "@assets/20260320_03_1781510852915.jpg";
 import blindTiger4 from "@assets/20260320_04_(1)_1781510852902.jpg";
+import casella1 from "@assets/20250920_084544811_iOS_1781511024576.JPG";
+import casella2 from "@assets/20250906_073139177_iOS_1781511024561.jpg";
+import casella3 from "@assets/20250906_073206860_iOS_1781511024575.jpg";
+import casella4 from "@assets/20250920_075721336_iOS_1781511024575.jpg";
+import casella5 from "@assets/20250920_081414289_iOS_1781511024575.jpg";
+import casella6 from "@assets/20250920_081625189_iOS_1781511024576.jpg";
+import casella7 from "@assets/IMG_1026_1781511024577.jpeg";
+import casella8 from "@assets/IMG_1030_1781511024577.jpeg";
+import casella9 from "@assets/IMG_1031_1781511024577.jpeg";
+import casella10 from "@assets/IMG_1032_1781511024577.jpeg";
+import casella11 from "@assets/IMG_1033_1781511024578.jpeg";
+import casella12 from "@assets/IMG_1034_1781511024578.jpeg";
 
 const projects = [
   {
@@ -22,10 +33,11 @@ const projects = [
   },
   {
     id: 2,
-    title: "Datacenter Enterprise Milano",
-    category: "Infrastrutture Critiche",
-    image: proj2,
-    gallery: [proj2],
+    title: "Casella Macchine Agricole Srl",
+    subtitle: "Carpaneto Piacentino (PC)",
+    category: "Industriale",
+    image: casella1,
+    gallery: [casella1, casella2, casella3, casella4, casella5, casella6, casella7, casella8, casella9, casella10, casella11, casella12],
   },
   {
     id: 3,

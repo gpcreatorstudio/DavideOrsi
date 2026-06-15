@@ -21,6 +21,15 @@ import casella9 from "@assets/IMG_1031_1781511024577.jpeg";
 import casella10 from "@assets/IMG_1032_1781511024577.jpeg";
 import casella11 from "@assets/IMG_1033_1781511024578.jpeg";
 import casella12 from "@assets/IMG_1034_1781511024578.jpeg";
+import plex1 from "@assets/23c30da6-f364-401b-b730-1feb714784b1_1781511103717.jpeg";
+import plex2 from "@assets/e896ffd2-6f9c-4911-a150-5919cf5d154e_1781511103718.jpeg";
+import plex3 from "@assets/1eefebb5-c602-4a17-9cfe-bbbd249e9ad4_1781511103714.jpeg";
+import plex4 from "@assets/f4d63374-a890-4c50-8a9f-d334426ed21b_1781511103718.jpeg";
+import plex5 from "@assets/8c0ed485-27e1-4426-9175-7db032899f70_1781511103717.jpeg";
+import plex6 from "@assets/5f57c5f6-ab61-4008-a475-0b922bf0c6ea_1781511103716.jpeg";
+import plex7 from "@assets/d6c6767d-d678-4a3c-9cf1-fa2a46a6e1df_1781511103718.jpeg";
+import plex8 from "@assets/8d0a7e9f-73f3-4693-a3f2-345ecf009fc9_1781511103717.jpeg";
+import plex9 from "@assets/IMG_9183_1781511103719.jpeg";
 
 const projects = [
   {
@@ -41,10 +50,11 @@ const projects = [
   },
   {
     id: 3,
-    title: "Centro Commerciale Il Giardino",
-    category: "Commerciale",
-    image: proj3,
-    gallery: [proj3],
+    title: 'Palestra "PLEX GYM"',
+    subtitle: "Fiorenzuola d'Arda (PC)",
+    category: "Locale Commerciale",
+    image: plex1,
+    gallery: [plex1, plex2, plex3, plex4, plex5, plex6, plex7, plex8, plex9],
   },
   {
     id: 4,

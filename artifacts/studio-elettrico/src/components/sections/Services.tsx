@@ -1,135 +1,94 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Zap } from "lucide-react";
+import { motion } from "framer-motion";
+import { Zap, FileText, Settings, Sun, Home, ShieldCheck } from "lucide-react";
 
-type TabId = "residenziale" | "commerciale" | "industriale" | "terziario";
+const services = [
+  {
+    icon: Zap,
+    title: "PROGETTAZIONE ELETTRICA E SPECIALE",
+    items: [
+      "Impianti elettrici civili e industriali",
+      "Impianti rete dati e cablaggio strutturato",
+      "Impianti di zootecnica",
+      "Progettazione impianti elettrici",
+      "Progettazione impianti domotici",
+      "Progettazione impianti di sicurezza (antifurti, antincendio, sistemi di videosorveglianza)",
+      "Progettazione in ambienti particolari quali, a maggior rischio in caso di incendio, ambulatori medici, luoghi di pubblico spettacolo, ecc.",
+      "Progettazione di impianti elettrici per la protezione contro le scariche e le sovratensioni di origine atmosferica",
+      "Progettazione di impianti fotovoltaici e di accumulo di energia",
+    ],
+  },
+  {
+    icon: FileText,
+    title: "DOCUMENTAZIONE DI VALUTAZIONE DEI RISCHI (D.LGS. 81/08)",
+    items: [
+      "Redazione della valutazione del rischio da scariche atmosferiche",
+      "Redazione della valutazione del rischio elettrico",
+      "Redazione della valutazione e classificazione delle zone ATEX",
+    ],
+  },
+  {
+    icon: Settings,
+    title: "VERIFICHE E COLLAUDI IMPIANTI",
+    items: [
+      "Verifiche iniziali e periodiche ai sensi del DM 37/08",
+      "Verifiche impianti di messa a terra (DPR 462/01)",
+      "Collaudi impianti fotovoltaici",
+      "Verifiche impianti in luoghi con pericolo di esplosione (ATEX)",
+      "Assistenza durante ispezioni degli Enti di controllo",
+    ],
+  },
+  {
+    icon: Sun,
+    title: "SISTEMI FOTOVOLTAICI E RINNOVABILI",
+    items: [
+      "Progettazione impianti fotovoltaici residenziali e industriali",
+      "Sistemi di accumulo e storage",
+      "Impianti di ricarica veicoli elettrici (EV Charging)",
+      "Pratiche incentivi GSE e Conto Energia",
+      "Audit energetico e diagnosi energetica",
+    ],
+  },
+  {
+    icon: Home,
+    title: "DOMOTICA E SMART BUILDING",
+    items: [
+      "Progettazione sistemi KNX e BACnet",
+      "Building Automation e BMS",
+      "Controllo luci, clima e sicurezza integrati",
+      "Supervisione remota impianti",
+      "Integrazione IoT e soluzioni smart",
+    ],
+  },
+  {
+    icon: ShieldCheck,
+    title: "CONSULENZA NORMATIVA E CERTIFICAZIONI",
+    items: [
+      "Supporto tecnico CEI, UNI e normative vigenti",
+      "Dichiarazioni di conformità (DM 37/08)",
+      "Certificazioni ISO 9001",
+      "Consulenza SUPERBONUS ed Ecobonus",
+      "Perizie tecniche e relazioni specialistiche",
+    ],
+  },
+];
 
-const tabsData: Record<TabId, {
-  description: string;
-  boxes: { title: string; items: string[] }[];
-}> = {
-  residenziale: {
-    description:
-      "La progettazione in ambito residenziale richiede precisione normativa e attenzione alle esigenze abitative. Offriamo soluzioni complete per appartamenti, ville e condomini, garantendo sicurezza, efficienza e comfort. Ogni impianto è progettato nel rispetto della norma CEI 64-8 e delle più recenti disposizioni in materia di efficienza energetica e domotica.",
-    boxes: [
-      {
-        title: "PROGETTAZIONE ELETTRICA ABITATIVA",
-        items: [
-          "Impianti civili a norma CEI 64-8",
-          "Quadri elettrici residenziali",
-          "Impianti domotici KNX",
-          "Certificazioni e collaudi",
-          "Consulenza SUPERBONUS",
-        ],
-      },
-      {
-        title: "DOCUMENTAZIONE E VALUTAZIONE DEI RISCHI (D.LGS. 81/08)",
-        items: [
-          "Impianti fotovoltaici residenziali",
-          "Sistemi di accumulo",
-          "Ricarica veicoli elettrici",
-          "Audit energetico",
-          "Pratiche GSE/incentivi",
-        ],
-      },
-    ],
-  },
-  commerciale: {
-    description:
-      "Per il settore commerciale progettiamo impianti elettrici in grado di supportare attività complesse, garantendo continuità operativa, sicurezza e conformità alle normative vigenti. Dalla grande distribuzione agli uffici direzionali, ogni soluzione è studiata per ottimizzare i costi energetici e massimizzare l'affidabilità dell'infrastruttura elettrica.",
-    boxes: [
-      {
-        title: "IMPIANTI COMMERCIALI E DIREZIONALI",
-        items: [
-          "Centri commerciali e GDO",
-          "Uffici e showroom",
-          "Impianti di sicurezza",
-          "Sistemi UPS e continuità",
-          "Manutenzione preventiva",
-        ],
-      },
-      {
-        title: "ILLUMINAZIONE E EFFICIENZA ENERGETICA",
-        items: [
-          "Progettazione illuminotecnica",
-          "Sistemi LED e DALI",
-          "Risparmio energetico certificato",
-          "Controllo BEMS",
-          "Certificazione UNI EN 12464",
-        ],
-      },
-    ],
-  },
-  industriale: {
-    description:
-      "L'industria richiede impianti robusti, sicuri e progettati per operare in condizioni estreme. Il nostro studio vanta una consolidata esperienza nella progettazione di impianti elettrici industriali ad alta complessità: dalla distribuzione in media tensione all'automazione avanzata, ogni soluzione è tarata sulle reali esigenze produttive del cliente.",
-    boxes: [
-      {
-        title: "PROGETTAZIONE IMPIANTI INDUSTRIALI",
-        items: [
-          "Distribuzione MT/BT",
-          "Quadri MCC e PLC",
-          "Cabine di trasformazione",
-          "Impianti ATEX",
-          "Coordinamento interferenze",
-        ],
-      },
-      {
-        title: "AUTOMAZIONE E SUPERVISIONE INDUSTRIALE",
-        items: [
-          "Supervisione SCADA",
-          "Reti industriali (Profibus/Modbus)",
-          "Variatori di frequenza",
-          "Gruppi elettrogeni",
-          "Analisi del carico",
-        ],
-      },
-    ],
-  },
-  terziario: {
-    description:
-      "Il settore terziario include strutture complesse che richiedono impianti elettrici altamente affidabili e conformi a normative specifiche. Ospedali, alberghi, istituti scolastici e data center richiedono competenze specialistiche che il nostro studio è in grado di garantire, con un approccio multidisciplinare e una profonda conoscenza delle normative di settore.",
-    boxes: [
-      {
-        title: "STRUTTURE TERZIARIE E SANITARIE",
-        items: [
-          "Ospedali e strutture sanitarie",
-          "Alberghi e hospitality",
-          "Scuole e università",
-          "Musei e beni culturali",
-          "Data center",
-        ],
-      },
-      {
-        title: "IMPIANTI SPECIALI E TECNOLOGICI",
-        items: [
-          "Sistemi BMS/BAS",
-          "TVCC e controllo accessi",
-          "Impianti antincendio",
-          "Rilevazione gas",
-          "Sistemi di comunicazione",
-        ],
-      },
-    ],
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.1 },
   },
 };
 
-const tabLabels: Record<TabId, string> = {
-  residenziale: "RESIDENZIALE",
-  commerciale: "COMMERCIALE",
-  industriale: "INDUSTRIALE",
-  terziario: "TERZIARIO",
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
 export function Services() {
-  const [activeTab, setActiveTab] = useState<TabId>("residenziale");
-  const current = tabsData[activeTab];
-
   return (
     <section id="services" className="py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6 max-w-5xl">
-        {/* Header */}
-        <div className="mb-10">
+        <div className="mb-12">
           <p className="text-primary font-semibold uppercase tracking-widest text-xs mb-3">
             I Nostri Servizi
           </p>
@@ -137,78 +96,56 @@ export function Services() {
             I Nostri Servizi
           </h2>
           <p className="text-[#555] max-w-2xl">
-            SE Impianti DG specializzata nella progettazione di impianti elettrici civili e
-            industriali di altissima qualità. Dalla progettazione alla certificazione, ogni
-            impianto è una firma di precisione e affidabilità.
+            Soluzioni ingegneristiche su misura per ogni settore. Dalla progettazione alla
+            certificazione, ogni impianto è una firma di precisione e affidabilità.
           </p>
         </div>
 
-        {/* Tabs */}
-        <div className="mb-6 overflow-x-auto pb-1">
-          <div className="flex gap-6 border-b border-[#e0e0e0] min-w-max">
-            {(Object.keys(tabsData) as TabId[]).map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                data-testid={`tab-${tab}`}
-                className={`pb-3 text-xs font-bold tracking-widest uppercase transition-colors relative whitespace-nowrap ${
-                  activeTab === tab
-                    ? "text-primary"
-                    : "text-[#888] hover:text-[#333]"
-                }`}
+        <motion.div
+          className="grid md:grid-cols-2 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+        >
+          {services.map((service, idx) => {
+            const Icon = service.icon;
+            return (
+              <motion.div
+                key={idx}
+                variants={cardVariants}
+                className="border border-[#d4e8d4] rounded-sm p-7 bg-white"
+                data-testid={`service-card-${idx}`}
               >
-                {tabLabels[tab]}
-                {activeTab === tab && (
-                  <motion.div
-                    layoutId="activeTabBar"
-                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary"
-                  />
-                )}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Tab content */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.25 }}
-          >
-            {/* Description paragraph */}
-            <p className="text-[#444] text-sm leading-relaxed mb-8 max-w-3xl">
-              {current.description}
-            </p>
-
-            {/* Two service boxes */}
-            <div className="grid md:grid-cols-2 gap-6">
-              {current.boxes.map((box, idx) => (
-                <div
-                  key={idx}
-                  className="border border-[#e0e0e0] p-7 rounded-sm bg-white"
-                >
-                  <div className="flex items-center gap-3 mb-5">
-                    <Zap className="w-5 h-5 text-primary flex-shrink-0" />
-                    <h3 className="text-xs font-bold tracking-widest uppercase text-[#111]">
-                      {box.title}
-                    </h3>
+                <div className="flex items-start gap-3 mb-5">
+                  <div className="w-8 h-8 border border-[#d4e8d4] rounded flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-4 h-4 text-primary" />
                   </div>
-                  <ul className="space-y-2.5">
-                    {box.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm text-[#555]">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <h3 className="text-xs font-bold tracking-widest uppercase text-[#111] leading-snug pt-1">
+                    {service.title}
+                  </h3>
                 </div>
-              ))}
-            </div>
-          </motion.div>
-        </AnimatePresence>
+                <ul className="space-y-2.5">
+                  {service.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2.5 text-sm text-[#444]">
+                      <svg
+                        className="w-4 h-4 text-primary flex-shrink-0 mt-0.5"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                      >
+                        <rect x="0.5" y="0.5" width="15" height="15" rx="2.5" stroke="currentColor" strokeOpacity="0.4"/>
+                        <path d="M4 8l3 3 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </div>
     </section>
   );

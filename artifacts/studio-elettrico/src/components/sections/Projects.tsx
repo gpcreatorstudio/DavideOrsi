@@ -1,10 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import proj3 from "@/assets/images/project-3.png";
-import proj4 from "@/assets/images/project-4.png";
-import proj5 from "@/assets/images/project-5.png";
-import proj6 from "@/assets/images/project-6.png";
 import blindTiger1 from "@assets/20260320_01_(1)_1781510852916.jpg";
 import blindTiger2 from "@assets/20260320_02_1781510852915.jpg";
 import blindTiger3 from "@assets/20260320_03_1781510852915.jpg";
@@ -124,20 +120,6 @@ const projects = [
     category: "Ristorazione",
     image: bistro1,
     gallery: [bistro1],
-  },
-  {
-    id: 5000,
-    title: "Palazzina Residenziale Eco Smart",
-    category: "Residenziale",
-    image: proj5,
-    gallery: [proj5],
-  },
-  {
-    id: 6,
-    title: "Impianto Fotovoltaico Industriale 500kW",
-    category: "Energie Rinnovabili",
-    image: proj6,
-    gallery: [proj6],
   },
 ];
 

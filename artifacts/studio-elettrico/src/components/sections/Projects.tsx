@@ -65,6 +65,7 @@ import bassi17 from "@assets/20241016_074906686_iOS_1781511778606.jpg";
 import bassi18 from "@assets/20241016_074908846_iOS_1781511778606.jpg";
 import bassi19 from "@assets/20241016_074917394_iOS_1781511778606.jpg";
 import bassi20 from "@assets/20241016_074919168_iOS_1781511778607.jpg";
+import padel1 from "@assets/INAUGURAZIONE_PADEL_FIDENZA_24-4-24.mp4-2024-04-25-18-29-16_1781511956220.jpg";
 
 const projects = [
   {
@@ -108,7 +109,15 @@ const projects = [
     gallery: [bassi1, bassi2, bassi3, bassi4, bassi5, bassi6, bassi7, bassi8, bassi9, bassi10, bassi11, bassi12, bassi13, bassi14, bassi15, bassi16, bassi17, bassi18, bassi19, bassi20],
   },
   {
-    id: 5,
+    id: 6,
+    title: 'Campi da Padel "AREA PADEL"',
+    subtitle: "Fidenza (PR)",
+    category: "Sportivo",
+    image: padel1,
+    gallery: [padel1],
+  },
+  {
+    id: 5000,
     title: "Palazzina Residenziale Eco Smart",
     category: "Residenziale",
     image: proj5,

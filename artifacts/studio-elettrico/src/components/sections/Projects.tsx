@@ -45,6 +45,26 @@ import ottica12 from "@assets/20260413_124641505_iOS_1781511542777.jpg";
 import ottica13 from "@assets/20260413_124638836_iOS_1781511542777.jpg";
 import ottica14 from "@assets/20260413_124624276_iOS_1781511542778.jpg";
 import ottica15 from "@assets/20260413_124620327_iOS_1781511542778.jpg";
+import bassi1 from "@assets/20241016_074319742_iOS_1781511778599.jpg";
+import bassi2 from "@assets/20241016_074325957_iOS_1781511778604.jpg";
+import bassi3 from "@assets/20241016_074328061_iOS_1781511778604.jpg";
+import bassi4 from "@assets/20241016_074332580_iOS_1781511778604.jpg";
+import bassi5 from "@assets/20241016_074356945_iOS_1781511778604.jpg";
+import bassi6 from "@assets/20241016_074413928_iOS_1781511778605.jpg";
+import bassi7 from "@assets/20241016_074808814_iOS_1781511778605.jpg";
+import bassi8 from "@assets/20241016_074813455_iOS_1781511778605.jpg";
+import bassi9 from "@assets/20241016_074815823_iOS_1781511778605.jpg";
+import bassi10 from "@assets/20241016_074825291_iOS_1781511778605.jpg";
+import bassi11 from "@assets/20241016_074827436_iOS_1781511778605.jpg";
+import bassi12 from "@assets/20241016_074829759_iOS_1781511778605.jpg";
+import bassi13 from "@assets/20241016_074831485_iOS_1781511778606.jpg";
+import bassi14 from "@assets/20241016_074850842_iOS_1781511778606.jpg";
+import bassi15 from "@assets/20241016_074855191_iOS_1781511778606.jpg";
+import bassi16 from "@assets/20241016_074857296_iOS_1781511778606.jpg";
+import bassi17 from "@assets/20241016_074906686_iOS_1781511778606.jpg";
+import bassi18 from "@assets/20241016_074908846_iOS_1781511778606.jpg";
+import bassi19 from "@assets/20241016_074917394_iOS_1781511778606.jpg";
+import bassi20 from "@assets/20241016_074919168_iOS_1781511778607.jpg";
 
 const projects = [
   {
@@ -80,11 +100,12 @@ const projects = [
     gallery: [ottica1, ottica2, ottica3, ottica4, ottica5, ottica6, ottica7, ottica8, ottica9, ottica10, ottica11, ottica12, ottica13, ottica14, ottica15],
   },
   {
-    id: 4000,
-    title: "Ospedale Civile Bergamo — Reparto Emergenze",
-    category: "Sanitario",
-    image: proj4,
-    gallery: [proj4],
+    id: 5,
+    title: 'Borgo "I Bassi"',
+    subtitle: "Pellegrino Parmense (PR)",
+    category: "Residenziale",
+    image: bassi1,
+    gallery: [bassi1, bassi2, bassi3, bassi4, bassi5, bassi6, bassi7, bassi8, bassi9, bassi10, bassi11, bassi12, bassi13, bassi14, bassi15, bassi16, bassi17, bassi18, bassi19, bassi20],
   },
   {
     id: 5,

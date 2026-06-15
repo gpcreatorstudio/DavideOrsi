@@ -12,13 +12,13 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#071208] text-white pt-20 pb-8">
+    <footer className="bg-[#071208] text-white pt-12 md:pt-20 pb-8">
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
           
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="inline-flex mb-6 cursor-pointer">
-              <img src={logo} alt="Davide Orsi Studio Tecnico STP SRL" className="h-36 w-auto" />
+              <img src={logo} alt="Davide Orsi Studio Tecnico STP SRL" className="h-20 md:h-36 w-auto" />
             </Link>
             <p className="text-[#a0a0a0] max-w-sm leading-relaxed mb-6 font-body text-sm">
               Studio Tecnico specializzato nella progettazione di impianti elettrici complessi per i settori industriale, commerciale e civile. 

@@ -3,9 +3,9 @@ import aboutImg from "@/assets/images/about.png";
 
 export function About() {
   return (
-    <section id="about" className="py-24 bg-[#f8f8f8]">
+    <section id="about" className="py-16 md:py-24 bg-[#f8f8f8]">
       <div className="container px-4 md:px-6 mx-auto max-w-6xl">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start">
           
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ export function About() {
               />
             </div>
             
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-2 md:gap-4">
               <div className="bg-white border border-[#e0e0e0] p-4 rounded text-center">
                 <div className="text-3xl font-heading font-bold text-primary mb-1">10+</div>
                 <div className="text-xs font-semibold text-[#555] uppercase tracking-wider">Anni di Esperienza</div>

@@ -142,7 +142,7 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-24 bg-white">
+    <section id="projects" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
         <div className="mb-12">
           <p className="text-primary font-semibold uppercase tracking-widest text-xs mb-3">Portfolio Lavori</p>
@@ -221,17 +221,17 @@ export function Projects() {
               <>
                 <button
                   onClick={prev}
-                  className="absolute left-4 md:left-8 text-white/70 hover:text-white p-2 bg-black/40 rounded-full"
+                  className="absolute left-2 md:left-8 text-white/70 hover:text-white p-3 bg-black/50 rounded-full touch-manipulation"
                   data-testid="button-lightbox-prev"
                 >
-                  <ChevronLeft className="w-7 h-7" />
+                  <ChevronLeft className="w-7 h-7 md:w-8 md:h-8" />
                 </button>
                 <button
                   onClick={next}
-                  className="absolute right-4 md:right-8 text-white/70 hover:text-white p-2 bg-black/40 rounded-full"
+                  className="absolute right-2 md:right-8 text-white/70 hover:text-white p-3 bg-black/50 rounded-full touch-manipulation"
                   data-testid="button-lightbox-next"
                 >
-                  <ChevronRight className="w-7 h-7" />
+                  <ChevronRight className="w-7 h-7 md:w-8 md:h-8" />
                 </button>
               </>
             )}

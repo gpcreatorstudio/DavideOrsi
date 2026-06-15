@@ -26,7 +26,7 @@ export function WhyUs() {
   ];
 
   return (
-    <section className="py-24 bg-[#f8f8f8]">
+    <section className="py-16 md:py-24 bg-[#f8f8f8]">
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
         <div className="mb-16 text-center">
           <h2 className="text-primary font-heading font-extrabold uppercase tracking-widest text-sm mb-2">Perché Sceglierci</h2>

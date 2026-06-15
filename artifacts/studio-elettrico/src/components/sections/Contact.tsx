@@ -3,7 +3,7 @@ import { MapPin, Mail, Phone } from "lucide-react";
 
 export function Contact() {
   return (
-    <section id="contact" className="py-24 bg-white border-t border-[#e0e0e0]">
+    <section id="contact" className="py-16 md:py-24 bg-white border-t border-[#e0e0e0]">
       <div className="container mx-auto px-4 md:px-6 max-w-4xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

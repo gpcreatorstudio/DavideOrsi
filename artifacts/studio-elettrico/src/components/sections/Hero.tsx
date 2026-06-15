@@ -40,7 +40,7 @@ export function Hero() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-[clamp(2.8rem,8vw,7rem)] font-[800] text-white leading-[1.1] mb-8 uppercase"
+            className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-[clamp(2.8rem,8vw,7rem)] font-[800] text-white leading-[1.1] mb-6 md:mb-8 uppercase"
           >
             Progettiamo il<br />
             Futuro<br />

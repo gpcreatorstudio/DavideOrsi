@@ -66,6 +66,7 @@ import bassi18 from "@assets/20241016_074908846_iOS_1781511778606.jpg";
 import bassi19 from "@assets/20241016_074917394_iOS_1781511778606.jpg";
 import bassi20 from "@assets/20241016_074919168_iOS_1781511778607.jpg";
 import padel1 from "@assets/INAUGURAZIONE_PADEL_FIDENZA_24-4-24.mp4-2024-04-25-18-29-16_1781511956220.jpg";
+import bistro1 from "@assets/unnamed_1781512016599.webp";
 
 const projects = [
   {
@@ -115,6 +116,14 @@ const projects = [
     category: "Sportivo",
     image: padel1,
     gallery: [padel1],
+  },
+  {
+    id: 7,
+    title: 'Ristorante e Bar "AREA BISTRÓ FOOD & DRINKS"',
+    subtitle: "Fidenza (PR)",
+    category: "Ristorazione",
+    image: bistro1,
+    gallery: [bistro1],
   },
   {
     id: 5000,

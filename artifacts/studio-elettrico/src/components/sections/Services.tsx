@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Zap, FileText, Settings, Sun, Home, ShieldCheck } from "lucide-react";
+import { Zap, FileText } from "lucide-react";
 
 const services = [
   {
@@ -24,50 +24,6 @@ const services = [
       "Redazione della valutazione del rischio da scariche atmosferiche",
       "Redazione della valutazione del rischio elettrico",
       "Redazione della valutazione e classificazione delle zone ATEX",
-    ],
-  },
-  {
-    icon: Settings,
-    title: "VERIFICHE E COLLAUDI IMPIANTI",
-    items: [
-      "Verifiche iniziali e periodiche ai sensi del DM 37/08",
-      "Verifiche impianti di messa a terra (DPR 462/01)",
-      "Collaudi impianti fotovoltaici",
-      "Verifiche impianti in luoghi con pericolo di esplosione (ATEX)",
-      "Assistenza durante ispezioni degli Enti di controllo",
-    ],
-  },
-  {
-    icon: Sun,
-    title: "SISTEMI FOTOVOLTAICI E RINNOVABILI",
-    items: [
-      "Progettazione impianti fotovoltaici residenziali e industriali",
-      "Sistemi di accumulo e storage",
-      "Impianti di ricarica veicoli elettrici (EV Charging)",
-      "Pratiche incentivi GSE e Conto Energia",
-      "Audit energetico e diagnosi energetica",
-    ],
-  },
-  {
-    icon: Home,
-    title: "DOMOTICA E SMART BUILDING",
-    items: [
-      "Progettazione sistemi KNX e BACnet",
-      "Building Automation e BMS",
-      "Controllo luci, clima e sicurezza integrati",
-      "Supervisione remota impianti",
-      "Integrazione IoT e soluzioni smart",
-    ],
-  },
-  {
-    icon: ShieldCheck,
-    title: "CONSULENZA NORMATIVA E CERTIFICAZIONI",
-    items: [
-      "Supporto tecnico CEI, UNI e normative vigenti",
-      "Dichiarazioni di conformità (DM 37/08)",
-      "Certificazioni ISO 9001",
-      "Consulenza SUPERBONUS ed Ecobonus",
-      "Perizie tecniche e relazioni specialistiche",
     ],
   },
 ];

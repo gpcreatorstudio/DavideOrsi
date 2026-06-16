@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroBg from "@/assets/images/hero.png";
+import heroBg from "@/assets/images/hero-bg.jpg";
 
 export function Hero() {
   const containerVariants = {
@@ -47,7 +47,7 @@ export function Hero() {
 
           <motion.h1
             variants={itemVariants}
-            className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-[clamp(2.8rem,8vw,7rem)] font-[800] text-white leading-[1.1] mb-6 md:mb-8 uppercase"
+            className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-[800] text-white leading-[1.1] mb-6 md:mb-8 uppercase"
           >
             Progettiamo il<br />
             Futuro<br />

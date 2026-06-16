@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "-bZpDIAnLM1JNfRQ36p5h"
@@ -48,3 +47,27 @@ id = "1QjqiwVXxsDPIMUxYd4X_"
 uri = "file://artifacts/studio-elettrico/src/assets/images/project-6.png"
 type = "image"
 title = "industrial solar plant"
+
+[[outputs]]
+id = "fQZDqQxkS5ijaj5BZhnVo"
+uri = "file://attached_assets/image_search/technician_switchboard.jpg"
+type = "image"
+title = "Tecnico al quadro elettrico"
+
+[[outputs]]
+id = "bX8klJTUA3nFOp4AnqtlU"
+uri = "file://attached_assets/image_search/control_panel.jpg"
+type = "image"
+title = "Pannello di controllo"
+
+[[outputs]]
+id = "-w7mXKe9wQe6ZjOKOzmdl"
+uri = "file://attached_assets/image_search/install_1.jpg"
+type = "image"
+title = "Installazione impianti 1"
+
+[[outputs]]
+id = "NoqWa8Xd3jcz4CGCU1H_i"
+uri = "file://attached_assets/image_search/install_2.jpg"
+type = "image"
+title = "Installazione impianti 2"

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import heroBg from "@/assets/images/hero.png";
 
 export function Hero() {
   const containerVariants = {
@@ -22,12 +23,18 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-[100dvh] flex items-center overflow-hidden hero-circuit-bg">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#071208] via-[#071208]/90 to-transparent z-0" />
-      
-      <div className="container relative z-10 px-4 md:px-6 pt-24 pb-12 w-full">
+    <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
+      <img
+        src={heroBg}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-[#071208]/75 z-0" />
+
+      <div className="container relative z-10 px-4 md:px-6 pt-24 pb-12 w-full flex justify-center">
         <motion.div
-          className="max-w-4xl"
+          className="max-w-3xl text-center"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -46,17 +53,17 @@ export function Hero() {
             Futuro<br />
             Dell'<span className="text-primary">Energia</span>
           </motion.h1>
-          
+
           <motion.p
             variants={itemVariants}
-            className="text-base sm:text-lg text-[#a0a0a0] mb-10 max-w-2xl leading-relaxed font-body"
+            className="text-base sm:text-lg text-[#d0d0d0] mb-10 max-w-2xl mx-auto leading-relaxed font-body"
           >
             Ingegneria elettrica civile e industriale di altissima qualità. Dalla progettazione alla certificazione, ogni impianto è una firma di precisione e affidabilità.
           </motion.p>
-          
+
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-start gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <button
               onClick={() => scrollTo("#services")}

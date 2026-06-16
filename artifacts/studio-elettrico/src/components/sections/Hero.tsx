@@ -54,6 +54,13 @@ export function Hero() {
             Dell'<span className="text-primary">Energia</span>
           </motion.h1>
 
+          <motion.p
+            variants={itemVariants}
+            className="text-base sm:text-lg text-[#d0d0d0] mb-10 max-w-2xl mx-auto leading-relaxed font-body"
+          >
+            Dalla progettazione alla certificazione, ogni impianto è una firma di precisione e affidabilità.
+          </motion.p>
+
           <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"

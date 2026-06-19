@@ -43,7 +43,7 @@ export function Navbar() {
           ))}
           <button
             onClick={() => scrollTo("#contact")}
-            className="text-sm font-bold text-primary px-6 py-2.5 rounded border-[1.5px] border-primary bg-transparent hover:bg-primary hover:text-white transition-all"
+            className="text-sm font-bold text-[#152b17] px-6 py-2.5 rounded border-[1.5px] border-[#152b17] bg-transparent hover:bg-[#152b17] hover:text-white transition-all"
             data-testid="button-cta-navbar"
           >
             Richiedi Preventivo

@@ -22,7 +22,6 @@ const services = [
     items: [
       "Redazione della valutazione del rischio da scariche atmosferiche",
       "Redazione della valutazione del rischio elettrico",
-      "Redazione della valutazione e classificazione delle zone ATEX",
     ],
   },
 ];

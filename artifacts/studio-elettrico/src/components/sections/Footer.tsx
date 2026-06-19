@@ -17,7 +17,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
           
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="inline-flex mb-6 cursor-pointer">
+            <Link href="/" className="block mb-6 cursor-pointer">
               <img src={logo} alt="Davide Orsi Studio Tecnico STP SRL" className="h-[6.9rem] md:h-[12.42rem] w-auto" />
             </Link>
             <p className="text-[#a0a0a0] max-w-sm leading-relaxed mb-6 font-body text-sm">

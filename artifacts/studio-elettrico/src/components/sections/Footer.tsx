@@ -55,12 +55,12 @@ export function Footer() {
 
         </div>
 
-        <div className="pt-8 border-t border-primary/30 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-[#777]">
+        <div className="pt-8 border-t border-primary/30 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-medium text-black">
           <p>© {currentYear} Davide Orsi Studio Tecnico STP SRL — P.IVA 01923900334 — Capitale i.v. 10.000,00 €</p>
-          <p>Sito realizzato da <a href="https://gpcreator.it" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GP Creator Studio</a></p>
+          <p>Sito realizzato da <a href="https://gpcreator.it" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">GP Creator Studio</a></p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-primary transition-colors">Cookie Policy</a>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#152b17] text-white pt-12 md:pt-20 pb-8">
+    <footer className="bg-gradient-to-r from-white from-[20%] via-[#152b17]/80 via-[40%] to-[#152b17] text-white pt-12 md:pt-20 pb-8">
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
           

@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logo from "@assets/ORSI_DAVIDE_LOGOwh_1781513396998.png";
+import logo from "@assets/ORSI_DAVIDE_LOGO_1781859328923.svg";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();

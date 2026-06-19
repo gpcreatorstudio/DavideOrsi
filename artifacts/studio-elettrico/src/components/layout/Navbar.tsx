@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "@assets/ORSI_DAVIDE_LOGOwh_1781513396998.png";
+import logo from "@assets/ORSI_DAVIDE_LOGO_1781859328923.svg";
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

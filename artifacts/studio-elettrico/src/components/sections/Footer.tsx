@@ -12,7 +12,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="text-white pt-12 md:pt-20 pb-8" style={{ background: 'linear-gradient(30deg, white 20%, rgba(21,43,23,0.85) 50%, #152b17 100%)' }}>
+    <footer className="text-white pt-12 md:pt-20 pb-8" style={{ background: 'linear-gradient(30deg, white 45%, rgba(21,43,23,0.85) 65%, #152b17 100%)' }}>
       <div className="container mx-auto px-4 md:px-6 max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
           

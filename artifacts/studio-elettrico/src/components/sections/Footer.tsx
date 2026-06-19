@@ -26,17 +26,17 @@ export function Footer() {
             <h4 className="font-heading font-bold text-lg mb-6 uppercase tracking-wider text-[#152b17]">Studio</h4>
             <ul className="space-y-4">
               <li>
-                <button onClick={() => scrollTo("#about")} className="text-[#a0a0a0] hover:text-primary transition-colors text-sm font-medium">
+                <button onClick={() => scrollTo("#about")} className="text-[#152b17] hover:text-primary transition-colors text-sm font-medium">
                   Chi Siamo
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo("#projects")} className="text-[#a0a0a0] hover:text-primary transition-colors text-sm font-medium">
+                <button onClick={() => scrollTo("#projects")} className="text-[#152b17] hover:text-primary transition-colors text-sm font-medium">
                   Progetti
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollTo("#contact")} className="text-[#a0a0a0] hover:text-primary transition-colors text-sm font-medium">
+                <button onClick={() => scrollTo("#contact")} className="text-[#152b17] hover:text-primary transition-colors text-sm font-medium">
                   Contatti
                 </button>
               </li>

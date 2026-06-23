@@ -10,7 +10,7 @@ const services = [
       "Impianti rete dati e cablaggio strutturato",
       "Impianti zootecnici",
       "Impianti domotici",
-      "Impianti di sicurezza (antifurti, antincendio, sistemi di videosorveglianza)",
+      "Impianti di sicurezza (antintrusione, antincendio, sistemi di videosorveglianza)",
       "Impianti in ambienti particolari quali, a maggior rischio in caso di incendio, ambulatori medici, luoghi di pubblico spettacolo, ecc.",
       "Impianti elettrici per la protezione contro le scariche e le sovratensioni di origine atmosferica",
       "Impianti fotovoltaici e di accumulo di energia",

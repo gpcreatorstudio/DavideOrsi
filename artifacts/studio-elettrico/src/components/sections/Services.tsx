@@ -8,7 +8,7 @@ const services = [
     items: [
       "Impianti elettrici civili e industriali",
       "Impianti rete dati e cablaggio strutturato",
-      "Impianti Zootecnici",
+      "Impianti zootecnici",
       "Impianti domotici",
       "Impianti di sicurezza (antifurti, antincendio, sistemi di videosorveglianza)",
       "Impianti in ambienti particolari quali, a maggior rischio in caso di incendio, ambulatori medici, luoghi di pubblico spettacolo, ecc.",
